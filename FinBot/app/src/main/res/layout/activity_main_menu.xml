@@ -7,10 +7,73 @@
     tools:context="nthu.finbot.MainMenuActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/MainMenuIV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        app:srcCompat="@drawable/background_main_menu" />
+        app:srcCompat="@drawable/background_main_menu"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:id="@+id/BarIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="495dp"
+        app:srcCompat="@drawable/main_menu_bar" />
+
+    <Button
+        android:id="@+id/BarButton"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/transparent"
+        android:onClick="pressBarButton" />
+
+    <ImageButton
+        android:id="@+id/OpenBotButton"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/BarButton"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="61dp"
+        android:onClick="pressOpenBotButton"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/main_menu_open_bot_button" />
+
+    <ImageButton
+        android:id="@+id/OpenPropertyButton"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/OpenBotButton"
+        android:layout_marginEnd="27dp"
+        android:onClick="pressOpenPropertyButton"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/main_menu_open_property_button" />
+
+    <ImageButton
+        android:id="@+id/OpenQAButton"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_alignStart="@+id/OpenBotButton"
+        android:layout_below="@+id/OpenBotButton"
+        android:layout_marginTop="31dp"
+        android:onClick="pressOpenQAButton"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/main_menu_open_qa_button" />
+
+    <ImageButton
+        android:id="@+id/OpenReservationButton"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_alignStart="@+id/OpenPropertyButton"
+        android:layout_alignTop="@+id/OpenQAButton"
+        android:onClick="pressOpenReservationButton"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/main_menu_open_reservation_button" />
+
 </RelativeLayout>
