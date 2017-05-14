@@ -4,15 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/transparent"
     tools:context="nthu.finbot.MainMenuActivity">
 
     <ImageView
         android:id="@+id/MainMenuIV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/background_main_menu"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/background_main_menu" />
 
     <ImageView
         android:id="@+id/BarIV"
@@ -40,6 +42,7 @@
         android:layout_below="@+id/BarButton"
         android:layout_marginStart="35dp"
         android:layout_marginTop="61dp"
+        android:background="@android:color/holo_green_light"
         android:onClick="pressOpenBotButton"
         android:scaleType="fitCenter"
         app:srcCompat="@drawable/main_menu_open_bot_button" />
@@ -51,6 +54,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignTop="@+id/OpenBotButton"
         android:layout_marginEnd="27dp"
+        android:background="@android:color/holo_green_light"
         android:onClick="pressOpenPropertyButton"
         android:scaleType="fitCenter"
         app:srcCompat="@drawable/main_menu_open_property_button" />
@@ -62,6 +66,7 @@
         android:layout_alignStart="@+id/OpenBotButton"
         android:layout_below="@+id/OpenBotButton"
         android:layout_marginTop="31dp"
+        android:background="@android:color/holo_green_light"
         android:onClick="pressOpenQAButton"
         android:scaleType="fitCenter"
         app:srcCompat="@drawable/main_menu_open_qa_button" />
@@ -72,8 +77,20 @@
         android:layout_height="130dp"
         android:layout_alignStart="@+id/OpenPropertyButton"
         android:layout_alignTop="@+id/OpenQAButton"
+        android:background="@android:color/holo_green_light"
         android:onClick="pressOpenReservationButton"
         android:scaleType="fitCenter"
         app:srcCompat="@drawable/main_menu_open_reservation_button" />
+
+    <ImageButton
+        android:id="@+id/OpenNewsButton"
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/transparent"
+        android:onClick="pressOpenNewsButton"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/main_menu_open_news_button" />
 
 </RelativeLayout>
