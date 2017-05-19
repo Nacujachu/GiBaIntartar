@@ -27,7 +27,7 @@
         android:layout_marginBottom="38dp"
         android:background="@android:color/holo_green_dark"
         android:onClick="pressLoginButton"
-        android:text="Login"
+        android:text="登入"
         android:textColor="@android:color/background_light"
         android:textSize="24sp" />
 

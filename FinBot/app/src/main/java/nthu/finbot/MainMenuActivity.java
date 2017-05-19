@@ -1,6 +1,7 @@
 package nthu.finbot;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -45,6 +46,8 @@ public class MainMenuActivity extends AppCompatActivity {
 
     public void pressOpenQAButton(View v) {
         System.out.println("Press OpenQA");
+
+        startActivity(new Intent(this, QAActivity.class));
     }
 
     public void pressOpenReservationButton(View v) {
