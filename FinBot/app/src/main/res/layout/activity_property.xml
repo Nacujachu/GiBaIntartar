@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="nthu.finbot.PropertyActivity">
+
+    <ImageView
+        android:id="@+id/BarIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="495dp"
+        app:srcCompat="@drawable/main_menu_bar" />
+
+    <Button
+        android:id="@+id/BarButton"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/BarIV"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/transparent"
+        android:onClick="pressBarButton" />
+
+    <ScrollView
+        android:id="@+id/PropertySV"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/BarButton"
+        android:background="?attr/actionModeSplitBackground">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/PlanDButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/PlanCButton"
+                android:backgroundTint="@android:color/holo_green_light"
+                android:onClick="pressPlanDButton"
+                android:text="計畫D     +4.9" />
+
+            <Button
+                android:id="@+id/PlanCButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/PlanBButton"
+                android:backgroundTint="@android:color/holo_green_light"
+                android:onClick="pressPlanCButton"
+                android:text="計畫Ｃ     +3.7" />
+
+            <Button
+                android:id="@+id/PlanBButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/PlanAButton"
+                android:backgroundTint="@android:color/holo_red_light"
+                android:onClick="pressPlanBButton"
+                android:text="計畫B     +0.7" />
+
+            <Button
+                android:id="@+id/PlanAButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:backgroundTint="@android:color/holo_red_light"
+                android:onClick="pressPlanAButton"
+                android:text="計畫Ａ     +1.3" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/PlanChartIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/PropertySV"
+        android:background="@android:color/black"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/property_plan_a" />
+
+</RelativeLayout>

@@ -42,6 +42,8 @@ public class MainMenuActivity extends AppCompatActivity {
 
     public void pressOpenPropertyButton(View v) {
         System.out.println("Press OpenProperty");
+
+        startActivity(new Intent(this, PropertyActivity.class));
     }
 
     public void pressOpenQAButton(View v) {

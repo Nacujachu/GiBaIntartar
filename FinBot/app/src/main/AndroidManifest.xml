@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainMenuActivity" />
-        <activity android:name=".QAActivity"></activity>
+        <activity android:name=".QAActivity" />
+        <activity android:name=".PropertyActivity"></activity>
     </application>
 
 </manifest>
