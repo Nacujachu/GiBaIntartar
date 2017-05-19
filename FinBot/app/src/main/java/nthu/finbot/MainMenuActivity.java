@@ -4,8 +4,11 @@ import android.content.DialogInterface;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.PopupWindow;
 
 public class MainMenuActivity extends AppCompatActivity {
 
@@ -15,8 +18,21 @@ public class MainMenuActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main_menu);
     }
 
+    private PopupWindow ppWindow;
     public void pressBarButton(View v) {
         System.out.println("Press Bar");
+
+        getPopupWindow();
+        ppWindow.showAtLocation(v, Gravity.LEFT, 0, 0);
+    }
+    private void getPopupWindow() {
+        if(ppWindow == null) {
+            final View ppWindowView = getLayoutInflater().inflate(R.layout.left_pop_up_window, null, false);
+            ppWindow = new PopupWindow(ppWindowView, 250, ViewGroup.LayoutParams.MATCH_PARENT, true);
+            ppWindow.setAnimationStyle(R.style.AnimationFade);
+        } else {
+            ppWindow.dismiss();
+        }
     }
 
     public void pressOpenBotButton(View v) {

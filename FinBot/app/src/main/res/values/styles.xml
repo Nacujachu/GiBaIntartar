@@ -8,4 +8,8 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="AnimationFade">
+        <item name="android:windowEnterAnimation">@animator/left2right</item>
+        <item name="android:windowExitAnimation">@animator/right2left</item>
+    </style>
 </resources>
