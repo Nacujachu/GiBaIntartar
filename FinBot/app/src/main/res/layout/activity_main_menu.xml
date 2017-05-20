@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
-        app:srcCompat="@drawable/backk"
+        app:srcCompat="@drawable/back"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true" />
 
@@ -45,7 +45,7 @@
         android:background="@android:color/holo_green_light"
         android:onClick="pressOpenBotButton"
         android:scaleType="fitCenter"
-        app:srcCompat="@drawable/main_menu_open_bot_button" />
+        app:srcCompat="@drawable/finrobot" />
 
     <ImageButton
         android:id="@+id/OpenPropertyButton"
@@ -54,10 +54,10 @@
         android:layout_alignParentEnd="true"
         android:layout_alignTop="@+id/OpenBotButton"
         android:layout_marginEnd="27dp"
-        android:background="@android:color/holo_green_light"
+        android:background="@android:color/transparent"
         android:onClick="pressOpenPropertyButton"
         android:scaleType="fitCenter"
-        app:srcCompat="@drawable/main_menu_open_property_button" />
+        app:srcCompat="@drawable/tracer" />
 
     <ImageButton
         android:id="@+id/OpenQAButton"

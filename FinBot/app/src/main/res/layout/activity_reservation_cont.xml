@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/BarIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="495dp"
+        app:srcCompat="@drawable/main_menu_bar" />
+
+    <Button
+        android:id="@+id/BarButton"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/BarIV"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/transparent"
+        android:onClick="pressBarButton" />
+
+    <ImageView
+        android:id="@+id/ReservationIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/BarButton"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/background_reservation" />
+
+    <TextView
+        android:id="@+id/DateTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/BarButton"
+        android:background="@android:color/holo_purple"
+        android:text="  2017 / 5 / 21 "
+        android:textColor="@android:color/white"
+        android:textSize="40sp" />
+
+    <Button
+        android:id="@+id/button15"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignBottom="@+id/Time7Button"
+        android:layout_alignStart="@+id/Time5Button"
+        android:background="@android:color/holo_orange_light"
+        android:onClick="pressEndReservationButton"
+        android:text="預約"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/Time7Button"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignBottom="@+id/Time6Button"
+        android:layout_alignStart="@+id/Time4Button"
+        android:background="@android:color/darker_gray"
+        android:elevation="0dp"
+        android:onClick="pressTimeButton"
+        android:text="15:00"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/Time6Button"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignStart="@+id/Time3Button"
+        android:layout_below="@+id/Time3Button"
+        android:layout_marginTop="24dp"
+        android:background="@android:color/holo_red_light"
+        android:onClick="pressTimeButton"
+        android:text="14:00"
+        android:textColor="@android:color/white"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/Time5Button"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignStart="@+id/Time2Button"
+        android:layout_below="@+id/Time2Button"
+        android:layout_marginTop="30dp"
+        android:background="@android:color/holo_green_light"
+        android:onClick="pressTimeButton"
+        android:text="13:00"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/Time4Button"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignBottom="@+id/Time5Button"
+        android:layout_alignStart="@+id/Time1Button"
+        android:background="@android:color/darker_gray"
+        android:onClick="pressTimeButton"
+        android:text="12:00"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/Time3Button"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignBottom="@+id/Time4Button"
+        android:layout_alignStart="@+id/Time0Button"
+        android:background="@android:color/darker_gray"
+        android:onClick="pressTimeButton"
+        android:text="11:00"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/Time2Button"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignBottom="@+id/Time1Button"
+        android:layout_toEndOf="@+id/DateTV"
+        android:background="@android:color/holo_green_light"
+        android:onClick="pressTimeButton"
+        android:text="10:00"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/Time1Button"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignBottom="@+id/Time0Button"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/holo_green_light"
+        android:onClick="pressTimeButton"
+        android:text="09:00"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/Time0Button"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/DateTV"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="38dp"
+        android:background="@android:color/holo_green_light"
+        android:onClick="pressTimeButton"
+        android:text="08:00"
+        android:textSize="30sp" />
+
+</RelativeLayout>

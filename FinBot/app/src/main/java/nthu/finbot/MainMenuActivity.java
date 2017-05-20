@@ -41,7 +41,9 @@ public class MainMenuActivity extends AppCompatActivity {
     }
 
     public void pressOpenBotButton(View v) {
+
         System.out.println("Press OpenBot");
+        startActivity(new Intent(this, BotActivity.class));
     }
 
     public void pressOpenPropertyButton(View v) {
@@ -57,6 +59,7 @@ public class MainMenuActivity extends AppCompatActivity {
 
     public void pressOpenReservationButton(View v) {
         System.out.println("Press OpenReservation");
+        startActivity(new Intent(this, ReservationActivity.class));
     }
 
     public void pressOpenNewsButton(View v) {
@@ -65,4 +68,5 @@ public class MainMenuActivity extends AppCompatActivity {
 
         alert.show();
     }
+
 }

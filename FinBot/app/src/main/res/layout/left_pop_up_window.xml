@@ -9,11 +9,12 @@
         android:id="@+id/userHeadIV"
         android:layout_width="80dp"
         android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:layout_marginStart="24dp"
         android:layout_marginTop="26dp"
-        app:srcCompat="@color/colorAccent"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+        android:background="@drawable/userhead"
+        app:srcCompat="@drawable/userhead" />
 
     <Button
         android:id="@+id/userAcountButton"

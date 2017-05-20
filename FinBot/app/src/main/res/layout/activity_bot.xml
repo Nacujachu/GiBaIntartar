@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="nthu.finbot.BotActivity">
+
+    <Button
+        android:id="@+id/BarButton"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/BarIV"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/transparent"
+        android:onClick="pressBarButton" />
+
+    <ImageView
+        android:id="@+id/BarIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="495dp"
+        app:srcCompat="@drawable/main_menu_bar" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/BarButton"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/background_bot" />
+
+    <SeekBar
+        android:id="@+id/RiskSB"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/BarButton"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="47dp"
+        android:max="3"
+        android:progress="1" />
+
+    <SeekBar
+        android:id="@+id/YearSB"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:layout_alignStart="@+id/RiskSB"
+        android:layout_below="@+id/RiskSB"
+        android:layout_marginTop="50dp"
+        android:max="2"
+        android:progress="1" />
+
+    <SeekBar
+        android:id="@+id/AgeSB"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:max="40"
+        android:progress="25"
+        android:layout_below="@+id/YearSB"
+        android:layout_alignStart="@+id/YearSB" />
+
+    <SeekBar
+        android:id="@+id/TypeSB"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:layout_alignStart="@+id/AgeSB"
+        android:layout_below="@+id/AgeSB"
+        android:layout_marginTop="50dp"
+        android:max="4"
+        android:progress="2" />
+
+    <TextView
+        android:id="@+id/RiskTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/RiskSB"
+        android:layout_alignTop="@+id/RiskSB"
+        android:layout_toEndOf="@+id/RiskSB"
+        android:text="穩健型"
+        android:textColor="?attr/colorAccent"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/YearTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/YearSB"
+        android:layout_toEndOf="@+id/YearSB"
+        android:text="3~7年"
+        android:textColor="?attr/colorAccent"
+        android:textSize="35sp" />
+
+    <TextView
+        android:id="@+id/AgeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/AgeSB"
+        android:layout_toEndOf="@+id/AgeSB"
+        android:text="45歲"
+        android:textColor="?attr/colorAccent"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/TypeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/TypeSB"
+        android:layout_toEndOf="@+id/TypeSB"
+        android:text="退休"
+        android:textColor="?attr/colorAccent"
+        android:textSize="40sp" />
+
+    <Button
+        android:id="@+id/RecommandButton"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/RiskTV"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="17dp"
+        android:backgroundTint="@android:color/holo_green_dark"
+        android:onClick="pressRecommandButton"
+        android:text="分析"
+        android:textSize="24sp" />
+
+</RelativeLayout>
