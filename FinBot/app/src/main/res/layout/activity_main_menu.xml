@@ -69,7 +69,7 @@
         android:background="@android:color/holo_green_light"
         android:onClick="pressOpenQAButton"
         android:scaleType="fitCenter"
-        app:srcCompat="@drawable/main_menu_open_qa_button" />
+        app:srcCompat="@drawable/qandafreeicon7" />
 
     <ImageButton
         android:id="@+id/OpenReservationButton"
@@ -80,17 +80,18 @@
         android:background="@android:color/holo_green_light"
         android:onClick="pressOpenReservationButton"
         android:scaleType="fitCenter"
-        app:srcCompat="@drawable/main_menu_open_reservation_button" />
+        app:srcCompat="@drawable/book" />
 
     <ImageButton
         android:id="@+id/OpenNewsButton"
         android:layout_width="250dp"
         android:layout_height="100dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
         android:background="@android:color/transparent"
         android:onClick="pressOpenNewsButton"
         android:scaleType="fitCenter"
-        app:srcCompat="@drawable/main_menu_open_news_button" />
+        app:srcCompat="@drawable/main_menu_open_news_button"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/BarButton"
+        android:layout_marginBottom="10dp" />
 
 </RelativeLayout>
