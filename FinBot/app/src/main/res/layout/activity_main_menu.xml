@@ -11,10 +11,10 @@
         android:id="@+id/MainMenuIV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
         android:background="@android:color/transparent"
-        app:srcCompat="@drawable/background_main_menu" />
+        app:srcCompat="@drawable/backk"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
 
     <ImageView
         android:id="@+id/BarIV"
