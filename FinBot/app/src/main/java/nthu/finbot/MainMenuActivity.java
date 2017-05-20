@@ -10,13 +10,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.PopupWindow;
+import android.util.Log;
 
 public class MainMenuActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main_menu);
+
+
     }
 
     private PopupWindow ppWindow;
@@ -42,7 +46,6 @@ public class MainMenuActivity extends AppCompatActivity {
 
     public void pressOpenPropertyButton(View v) {
         System.out.println("Press OpenProperty");
-
         startActivity(new Intent(this, PropertyActivity.class));
     }
 
