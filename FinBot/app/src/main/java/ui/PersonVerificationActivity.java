@@ -53,6 +53,9 @@ import android.widget.TextView;
 import com.microsoft.projectoxford.face.FaceServiceClient;
 import com.microsoft.projectoxford.face.contract.Face;
 import com.microsoft.projectoxford.face.contract.VerifyResult;
+
+import nthu.finbot.MainMenuActivity;
+import nthu.finbot.PropertyActivity;
 import nthu.finbot.R;
 import helper.ImageHelper;
 import helper.LogHelper;
@@ -126,6 +129,8 @@ public class PersonVerificationActivity extends AppCompatActivity {
             }
 
             // Show the result on screen when verification is done.
+
+
             setUiAfterVerification(result);
         }
     }
@@ -407,6 +412,16 @@ public class PersonVerificationActivity extends AppCompatActivity {
                     + ". The confidence is " + formatter.format(result.confidence);
             setInfo(verificationResult);
         }
+        if(result.isIdentical){
+            Intent intent;
+            intent = new Intent(this , nthu.finbot.MainMenuActivity.class);
+            startActivity(intent);
+        }else{
+            Intent intent;
+            intent = new Intent(this , nthu.finbot.MainMenuActivity.class);
+         //  startActivity(intent);
+        }
+
     }
 
     // Show the result on screen when detection in image that indicated by index is done.

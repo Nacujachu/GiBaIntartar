@@ -45,6 +45,9 @@ public class SampleApp extends Application {
     public void onCreate() {
         super.onCreate();
         sFaceServiceClient = new FaceServiceRestClient(getString(R.string.subscription_key));
+        if( sFaceServiceClient == null ){
+            System.out.println("FUCK");
+        }
     }
 
     public static FaceServiceClient getFaceServiceClient() {

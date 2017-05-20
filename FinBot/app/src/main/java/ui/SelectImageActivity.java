@@ -38,15 +38,12 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
+import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
 import nthu.finbot.R;
-import helper.ImageHelper;
-import helper.LogHelper;
-import helper.SampleApp;
-import helper.StorageHelper;
 
 
 import java.io.File;
@@ -108,6 +105,33 @@ public class SelectImageActivity extends AppCompatActivity {
     }
 
     // When the button of "Take a Photo with Camera" is pressed.
+    /*
+    public void takePhoto(View view) {
+        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        //Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
+        if(intent.resolveActivity(getPackageManager()) != null) {
+            // Save the photo taken to a temporary file.
+            File storageDir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
+            try {
+
+              //  File file = File.createTempFile("IMG_", ".jpg", storageDir);
+                File cameraPhoto = new File(Environment.DIRECTORY_PICTURES);
+                System.out.println(Environment.DIRECTORY_PICTURES);
+              //  mUriPhotoTaken = Uri.fromFile(file);
+
+                Uri photoUri = FileProvider.getUriForFile(
+                        this,
+                        getPackageName() + ".fileprovider",
+                        cameraPhoto);
+
+                intent.putExtra(MediaStore.EXTRA_OUTPUT, photoUri);
+                startActivityForResult(intent, REQUEST_TAKE_PHOTO);
+
+            } catch (Exception e) {
+                setInfo(e.getMessage());
+            }
+        }
+    }*/
     public void takePhoto(View view) {
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         if(intent.resolveActivity(getPackageManager()) != null) {
@@ -125,6 +149,7 @@ public class SelectImageActivity extends AppCompatActivity {
     }
 
     // When the button of "Select a Photo in Album" is pressed.
+
     public void selectImageInAlbum(View view) {
         Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
         intent.setType("image/*");

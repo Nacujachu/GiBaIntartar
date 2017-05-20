@@ -90,6 +90,11 @@ public class PersonGroupActivity extends AppCompatActivity {
 
             // Get an instance of face service client.
             FaceServiceClient faceServiceClient = SampleApp.getFaceServiceClient();
+
+            if(faceServiceClient == null){
+                System.out.println("FFFFFFFFFFFFFFFFFFFFFFF");
+            }
+
             try{
                 publishProgress("Syncing with server to add person group...");
 
@@ -103,6 +108,7 @@ public class PersonGroupActivity extends AppCompatActivity {
             } catch (Exception e) {
                 publishProgress(e.getMessage());
                 addLog(e.getMessage());
+                addLog("ERRORHERE");
                 return null;
             }
         }
